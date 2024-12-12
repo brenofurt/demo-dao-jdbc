@@ -39,8 +39,10 @@ public class Program2 {
 		System.out.println("Updated");
 		System.out.println("");
 		
-		
-		
+		System.out.println("==== Testando deleteById =====\n");
+		int id2 = 12;
+		departmentDao.deleteById(id2);
+		System.out.println("Deleted!");
 	}
 
 }
