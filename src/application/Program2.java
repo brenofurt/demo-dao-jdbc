@@ -17,13 +17,30 @@ public class Program2 {
 		int id = 1;
 		Department department = departmentDao.findById(id);
 		System.out.println(department);
+		System.out.println();
 		
 		System.out.println("==== Testando findAll =====\n");
 		List<Department> list = new ArrayList<>(departmentDao.findAll());
 		for(Department d : list) {
 			System.out.println(d);
 		}
-
+		System.out.println();
+		
+		System.out.println("==== Testando insert =====\n");
+		Department dep2 = new Department(null, "Camping");
+		departmentDao.insert(dep2);
+		System.out.println("Inserted!");
+		System.out.println();
+		
+		
+		System.out.println("==== Testando update =====\n");
+		Department dep3 = new Department(6, "Games");
+		departmentDao.update(dep3);
+		System.out.println("Updated");
+		System.out.println("");
+		
+		
+		
 	}
 
 }
